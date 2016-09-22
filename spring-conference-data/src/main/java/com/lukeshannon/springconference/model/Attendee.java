@@ -3,8 +3,6 @@
  */
 package com.lukeshannon.springconference.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -19,7 +17,6 @@ public class Attendee {
 	private Long id;
 	private String email;
 	private String company;
-	private List<Session> sessions;
 	
 	public Long getId() {
 		return id;
@@ -38,12 +35,6 @@ public class Attendee {
 	}
 	public void setCompany(String company) {
 		this.company = company;
-	}
-	public List<Session> getSessions() {
-		return sessions;
-	}
-	public void setSessions(List<Session> sessions) {
-		this.sessions = sessions;
 	}
 	
 	
