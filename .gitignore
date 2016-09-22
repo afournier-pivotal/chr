@@ -1,3 +1,9 @@
 .recommenders/index/http___download_eclipse_org_recommenders_models_neon_
 identified-project-coordinates.json
 manual-mappings.json
+.metadata/
+Servers/
+/RemoteSystemsTempFiles/.project
+/spring-conference-data/.classpath
+/spring-conference-data/.settings/org.eclipse.core.resources.prefs
+/spring-conference-data/.project
