@@ -12,11 +12,12 @@ echo "**Pushing the 'New' Service with a route different than the currently runn
 echo "cf push -n $NEW_APP"
 cf push $NEW_APP -n $NEW_APP
 echo ""
+sleep 10s
 
 # Run Tests on the newly deployed app check that it is okay
 echo "**Testing the new service on its own route"
 echo ""
-RESPONSE=`curl -sI http://NEW_APP.$DOMAIN`
+RESPONSE=`curl -sI http://$NEW_APP.$DOMAIN`
 echo "$RESPONSE"
 if [[ $RESPONSE != *"HTTP/1.1 200 OK"* ]]
 then
