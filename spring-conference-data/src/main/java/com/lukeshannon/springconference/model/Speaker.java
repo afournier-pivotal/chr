@@ -6,6 +6,7 @@ package com.lukeshannon.springconference.model;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -16,6 +17,7 @@ import javax.persistence.Id;
 public class Speaker {
 	
 	@Id
+	@GeneratedValue
 	private Long id;
 	private String name;
 	private String twitter;

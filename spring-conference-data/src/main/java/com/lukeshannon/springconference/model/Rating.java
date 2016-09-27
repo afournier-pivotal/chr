@@ -2,16 +2,25 @@ package com.lukeshannon.springconference.model;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.NaturalId;
 
 @Entity
 public class Rating {
 	
 	@Id
+	@GeneratedValue
 	private Long id;
+	
 	private int score;
+	
 	private String comment;
+	
+	@ManyToOne(optional = false, fetch = FetchType.LAZY)
+	@NaturalId
 	private Session session;
 	
 	public Long getId() {
@@ -33,7 +42,6 @@ public class Rating {
 		this.comment = comment;
 	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
 	public Session getSession() {
 		return session;
 	}

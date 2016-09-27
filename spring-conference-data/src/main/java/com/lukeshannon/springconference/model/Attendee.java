@@ -4,6 +4,7 @@
 package com.lukeshannon.springconference.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -14,6 +15,7 @@ import javax.persistence.Id;
 public class Attendee {
 	
 	@Id
+	@GeneratedValue
 	private Long id;
 	private String email;
 	private String company;

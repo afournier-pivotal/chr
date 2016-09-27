@@ -11,11 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lukeshannon.springconference.model.Session;
 import com.lukeshannon.springconference.model.Speaker;
+import com.lukeshannon.springconference.service.SessionService;
 
 @RestController
 @RequestMapping("/v1")
 public class SessionController {
 	
+	private SessionService sessionService;
+	
+	
+	
+	public SessionController(SessionService sessionService) {
+		this.sessionService = sessionService;
+	}
+
+
+
 	@RequestMapping("/sessions")
 	public ResponseEntity<List<Session>> getSessions() {
 		List<Session> sessions = new ArrayList<Session>();
