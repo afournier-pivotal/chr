@@ -35,7 +35,9 @@
 -->
 </style>
 <!-- Load The Session Data -->
+<!--
 <script>
+
     $(document).ready(function() {
         $('#sessions').DataTable( {
                 "ajax": "<session end point>",
@@ -48,6 +50,7 @@
             } );
     } );
   </script>
+      -->
 </head>
     <body class="home page page-id-122 page-template-default  responsive-ux boxed-line aside-layout-ux" style="height: auto;">
         <div class="page-loading visible">
@@ -72,7 +75,7 @@
             </div>
 
             <div class="mobile-meta-con">
-                <div class="copyright">&copy; 2016 Pivotal Software, Inc.</div>
+                <div class="copyright">&copy; 2016 2016 Pivotal Toronto User Group.</div>
             </div>
         </div>
         <div id="wrap">        
@@ -99,7 +102,7 @@
                             <a class="icons-sidebar-unit" href="" title="Follow Pivotal on Google+"><i class="fa fa-google-plus-square"></i></a>           
                             <a class="icons-sidebar-unit" href="" title="Check out Pivotal's YouTube Channel"><i class="fa fa-youtube-square"></i></a>
                         </div>
-                        <div class="copyright">&copy; 2016 Pivotal Software, Inc.</div>
+                        <div class="copyright">&copy; 2016 Pivotal Toronto User Group.</div>
                     </div>
                 </div>
             </aside>
@@ -134,8 +137,63 @@
                                         	<div class="container">
                                                 <div class="row-fluid">
                                                     <div class="span3 moudle bottom-space-20 ">
+                                                    <table id="morningSessions" class="table table-striped table-bordered" cellspacing="0" width="100%">
+														    <thead>
+														        <tr>
+														          <th>Time</th>
+														          <th>Room</th>
+														          <th>Session Name</th>
+														          <th>Speakers</th>
+														        </tr>
+														    </thead>
+														    <tr>
+														    		<td>8:00 - 9:00</td>
+														    		<td>Event Space</td>
+														    		<td>Breakfast</td>
+														    		<td>Provided By Sourced</td>
+														    	</tr>
+														    	 <tr>
+														    		<td>10:35-11:30</td>
+														    		<td>Union Exhibition</td>
+														    		<td>Spring Cloud Data Flow Fundamentals and Demo</td>
+														    		<td>Marius Bogoevici</td>
+														    	</tr>
+														    	<tr>
+														    		<td>10:35-11:30</td>
+														    		<td>Young and Bloor</td>
+														    		<td>Cloud And Platform Track: AWS Fundamentals and The Benefits of Opinionated Systems</td>
+														    		<td>Chris Sandico and Zach Koncir of Sourced Group</td>
+														    	</tr>
+														   
+														    	<tr>
+														    		<td>11:35-12:25</td>
+														    		<td>Event Space</td>
+														    		<td>Spring MVC 4.x and Spring 5.0 Web Reactive Part 2</td>
+														    		<td>Rossen Stoyanchev</td>
+														    	</tr>
+														    	<tr>
+														    		<td>11:35-12:25</td>
+														    		<td>Union Exhibition</td>
+														    		<td>Cloud Native Java with Spring Cloud Services</td>
+														    		<td>Will Tran</td>
+														    	</tr>
+														    	<tr>
+														    		<td>11:35-12:25</td>
+														    		<td>Young and Bloor</td>
+														    		<td>Concourse Demo</td>
+														    		<td>Sameer Vohra</td>
+														    	</tr>
+														    <tfoot>
+														        <tr>
+														          <th>Time</th>
+														          <th>Room</th>
+														          <th>Session Name</th>
+														          <th>Speakers</th>
+														        </tr>
+														    </tfoot>
+														  </table>
                                                             <h5 class="style1">8:00-9:30am</h5><br/>
-                                                            <p>Breakfast (sponsored by <a href="http://www.sourcedgroup.com" target="_blank">Sourced Group</a>)<br/>Breakfast Demo: CI/CD Demo with Concourse</p>                                                    </div>
+                                                            <p>Breakfast (sponsored by <a href="http://www.sourcedgroup.com" target="_blank">Sourced Group</a>)<br/></p>                                                    </div>
                                                     <div class="span3 moudle bottom-space-20 ">
                                                             <h5 class="style1">9:30-10:30am</h5><br/>
                                                             <p>A Spring 5 Overview presented by Juergen Hoeller. We will also do a brief introduction of all speakers and the sessions they will be presenting.</p>
@@ -147,12 +205,61 @@
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle bottom-space-20 ">
                                                             <h5><span class="style1">10:35-12:25am</span> Morning Breakout Sessions</h5><br/><br/>
-                                                            <p>10:35-11:30 Spring MVC 4.x and Spring 5.0 Web Reactive Part 1 - by Rossen Stoyanchev</p>
-                                                            <p>10:35-11:30 Cloud And Platform Track: AWS Fundamentals and The Benefits of Opinionated Systems. Presented by Chris Sandico and Zach Koncir of Sourced Group.</p>
-                                                            <p>10:35-11:30 Data and Integration Track: Spring Cloud Data Flow Fundamentals and Demo. Presented by Marius Bogoevici, lead Contributor of Spring Cloud Data Flow</p>
-                                                            <p>11:35-12:25 Spring MVC 4.x and Spring 5.0 Web Reactive Part 2 - by Rossen Stoyanchev</p>
-                                                            <p>11:35-12:25 Spencer Gib - TBA</p>
-                                                            <p>11:35-12:25 Cloud Native Java with Spring Cloud Services: Presented by Will Tran</p>
+                                                            <table id="morningSessions" class="table table-striped table-bordered" cellspacing="0" width="100%">
+														    <thead>
+														        <tr>
+														          <th>Time</th>
+														          <th>Room</th>
+														          <th>Session Name</th>
+														          <th>Speakers</th>
+														        </tr>
+														    </thead>
+														    <tr>
+														    		<td>10:35-11:30</td>
+														    		<td>Event Space</td>
+														    		<td>Spring MVC 4.x and Spring 5.0 Web Reactive Part 1</td>
+														    		<td>Rossen Stoyanchev</td>
+														    	</tr>
+														    	 <tr>
+														    		<td>10:35-11:30</td>
+														    		<td>Union Exhibition</td>
+														    		<td>Spring Cloud Data Flow Fundamentals and Demo</td>
+														    		<td>Marius Bogoevici</td>
+														    	</tr>
+														    	<tr>
+														    		<td>10:35-11:30</td>
+														    		<td>Young and Bloor</td>
+														    		<td>Cloud And Platform Track: AWS Fundamentals and The Benefits of Opinionated Systems</td>
+														    		<td>Chris Sandico and Zach Koncir of Sourced Group</td>
+														    	</tr>
+														   
+														    	<tr>
+														    		<td>11:35-12:25</td>
+														    		<td>Event Space</td>
+														    		<td>Spring MVC 4.x and Spring 5.0 Web Reactive Part 2</td>
+														    		<td>Rossen Stoyanchev</td>
+														    	</tr>
+														    	<tr>
+														    		<td>11:35-12:25</td>
+														    		<td>Union Exhibition</td>
+														    		<td>Cloud Native Java with Spring Cloud Services</td>
+														    		<td>Will Tran</td>
+														    	</tr>
+														    	<tr>
+														    		<td>11:35-12:25</td>
+														    		<td>Young and Bloor</td>
+														    		<td>Concourse Demo</td>
+														    		<td>Sameer Vohra</td>
+														    	</tr>
+														    <tfoot>
+														        <tr>
+														          <th>Time</th>
+														          <th>Room</th>
+														          <th>Session Name</th>
+														          <th>Speakers</th>
+														        </tr>
+														    </tfoot>
+														  </table>
                                                     </div>
                                                 </div>
                                             </div>
@@ -162,7 +269,7 @@
                                                     <div class="span12 moudle bottom-space-20 ">
                                                             <h5><span class="style1">12:30-1:30pm</span> Lunch</h5><br/>
                                                             <p>Sponsored by <a href="http://www.intelliware.com/#all">Intelliware</a></p><br/>
-                                                            <p>Lunch Talk: Spring Tool Suite Demo presented by Kris De Volder</p>
+                                                            <p>Lunch Talk: </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -171,10 +278,65 @@
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle bottom-space-20 ">
                                                             <h5><span class="style1">1:30-2:30pm</span> Afternoon Breakout Sessions</h5><br/><br/>
-                                                            <p>1:35-2:25 Cloud And Platform Track: Microservices Security with Spring. Presented by Adib Sakali, Advisory Platform Architect at Pivotal</p>
-                                                            <p>1:35-2:25 Modern Java Component Design with Spring Framework 4.3. Presented by Juergen Hoeller</p>
-                                                            <p>1:35-2:25 Data and Integration Track: Moving from an ESB to Microservices Integration: capabilities , challenges, and solutions. Presented by Stu Charlton, Advisory Platform Architect at Pivotal</p>
-                                                            <p>2:30-3:25 Shift Performance Left: Performance Metrics Driven CI/CD. Presented by Michael Villiger of Dynatrace</p>
+                                                            <table id="morningSessions" class="table table-striped table-bordered" cellspacing="0" width="100%">
+														    <thead>
+														        <tr>
+														          <th>Time</th>
+														          <th>Room</th>
+														          <th>Session Name</th>
+														          <th>Speakers</th>
+														        </tr>
+														    </thead>
+														    <tr>
+														    		<td>1:35-2:25</td>
+														    		<td>Event Space</td>
+														    		<td>Modern Java Component Design with Spring Framework 4.3</td>
+														    		<td>Juergen Hoeller</td>
+														    	</tr>
+														    	 <tr>
+														    		<td>1:35-2:25</td>
+														    		<td>Union Exhibition</td>
+														    		<td>Microservices Security with Spring</td>
+														    		<td>Adib Sakali</td>
+														    	</tr>
+														    	<tr>
+														    		<td>1:35-2:25</td>
+														    		<td>Young and Bloor</td>
+														    		<td>Data and Integration Track: Moving from an ESB to Microservices Integration: capabilities , challenges, and solutions</td>
+														    		<td>Stu Charlton</td>
+														    	</tr>
+														   
+														    	<tr>
+														    		<td>2:30-3:25</td>
+														    		<td>Event Space</td>
+														    		<td>Spring Tool Suite Demo</td>
+														    		<td>Kris De Volder</td>
+														    	</tr>
+														    	<tr>
+														    		<td>2:30-3:25</td>
+														    		<td>Union Exhibition</td>
+														    		<td>Shift Performance Left: Performance Metrics Driven CI/CD. Presented by Michael Villiger of Dynatrace</td>
+														    		<td></td>
+														    	</tr>
+														    	<tr>
+														    		<td>2:30-3:25</td>
+														    		<td>Young and Bloor</td>
+														    		<td></td>
+														    		<td></td>
+														    	</tr>
+														    <tfoot>
+														        <tr>
+														          <th>Time</th>
+														          <th>Room</th>
+														          <th>Session Name</th>
+														          <th>Speakers</th>
+														        </tr>
+														    </tfoot>
+														  </table>
+                                                            <p>1:35-2:25 Cloud And Platform Track: </p>
+                                                            <p>1:35-2:25 </p>
+                                                            <p>1:35-2:25 </p>
+                                                            <p>2:30-3:25 </p>
                                                             <p>2:30-3:25 TBA</p>
                                                             <p>2:30-3:25 TBA</p><br>
                                                             <p style="font-weight:500">3:30 - 3:40 BREAK - coffee and cookies</p>
@@ -186,7 +348,7 @@
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle bottom-space-20 ">
                                                             <h5><span class="style1">3:40-4:40pm</span> Afternoon Breakout Sessions</h5><br/><br/>
-                                                            <p>3:40-4:40 Uncovering Authentication and Authorization in Spring Security: Presented by Joe Grandja</p>
+                                                            <p>3:40-4:40 Architecture Deep Dive in Spring Security: Presented by Joe Grandja</p>
                                                             <p>3:40-4:40 Dr. Dave Syer - TBA</p>
                                                             <p>3:40-4:40 Lessons Learned from Migrating Legacy Enterprise Applications to Microservices: Ontario Teachers Pension Plan - Ross Zhang</p>
                                                     </div>

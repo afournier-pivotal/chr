@@ -23,6 +23,7 @@ public class Rating {
 	@NaturalId
 	private Session session;
 	
+	
 	public Long getId() {
 		return id;
 	}
