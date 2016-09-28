@@ -7,6 +7,3 @@ insert into speaker(name,company,tagline,keynote) values ('Marius Bogoevici','Pi
 insert into speaker(name,company,tagline,keynote) values ('Kris De Volder','Pivotal','Spring Tool Suite Core Committer',true);
 insert into speaker(name,company,tagline,keynote) values ('Joe Grandja','Pivotal','Spring Security Committer',true);
 insert into speaker(name,company,tagline,keynote) values ('Will Tran','Pivotal','Spring Cloud Services Committer',true);
-insert into speaker(name,company,tagline,keynote) values ('','','');
-insert into speaker(name,company,tagline,keynote) values ('','','');
-insert into speaker(name,company,tagline,keynote) values ('','','');
