@@ -5,13 +5,9 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.NaturalId;
 
 @Entity
 public class Session implements Serializable {
@@ -24,12 +20,10 @@ public class Session implements Serializable {
 	
 	private String name;
 	
-	@ManyToOne(optional = false)
-	@NaturalId
+	@OneToMany
 	private List<Speaker> speakers;
 	
-	@ManyToOne(optional = false)
-	@NaturalId
+	@OneToMany
 	private List<Rating> ratings;
 	
 	private Date startTime;
@@ -55,7 +49,6 @@ public class Session implements Serializable {
 		this.speakers = speakers;
 	}
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "session")
 	public List<Rating> getRatings() {
 		return ratings;
 	}

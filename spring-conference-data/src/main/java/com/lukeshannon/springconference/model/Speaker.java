@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  * @author lshannon
@@ -22,6 +23,8 @@ public class Speaker {
 	private String name;
 	private String twitter;
 	private String website;
+	
+	@ManyToMany
 	private List<Session> sessions;
 	
 	public Long getId() {

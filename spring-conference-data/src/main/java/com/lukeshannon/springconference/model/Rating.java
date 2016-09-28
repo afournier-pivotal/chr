@@ -6,8 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.NaturalId;
-
 @Entity
 public class Rating {
 	
@@ -20,7 +18,6 @@ public class Rating {
 	private String comment;
 	
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-	@NaturalId
 	private Session session;
 	
 	
@@ -47,11 +44,8 @@ public class Rating {
 		return session;
 	}
 	
-
 	public void setSession(Session session) {
 		this.session = session;
 	}
 	
-	
-
 }

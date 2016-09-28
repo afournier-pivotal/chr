@@ -9,8 +9,8 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.lukeshannon.springconference.model.Attendee;
@@ -22,8 +22,8 @@ import com.lukeshannon.springconference.repo.RatingRepo;
 import com.lukeshannon.springconference.repo.SessionRepo;
 import com.lukeshannon.springconference.repo.SpeakerRepo;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SpringConferenceDataApplication.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest
 @WebAppConfiguration
 public class SpringConferenceDataApplicationTests {
 	
