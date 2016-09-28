@@ -18,7 +18,7 @@ public class RatingService {
 	}
 	
 	public List<Rating> getRatings(Long sessionId) {
-		Session session =sessionRepo.findOne(sessionId);
+		Session session = sessionRepo.findOne(sessionId);
 		return session.getRatings();
 	}
 	
