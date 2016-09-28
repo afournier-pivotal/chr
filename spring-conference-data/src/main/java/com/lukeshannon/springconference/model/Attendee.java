@@ -25,6 +25,13 @@ public class Attendee implements Serializable {
 	private String email;
 	private String company;
 	
+	public Attendee() {}
+	
+	public Attendee(String email, String company) {
+		super();
+		this.email = email;
+		this.company = company;
+	}
 	public Long getId() {
 		return id;
 	}

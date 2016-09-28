@@ -13,13 +13,22 @@ public class Rating implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	public Rating(int score, String token, Session session) {
+		super();
+		this.score = score;
+		this.token = token;
+		this.session = session;
+	}
+	
+	public Rating() {}
+	
 	@Id
 	@GeneratedValue
 	private Long id;
 	
 	private int score;
 	
-	private String comment;
+	private String token;
 	
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	private Session session;
@@ -37,13 +46,15 @@ public class Rating implements Serializable {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public String getComment() {
-		return comment;
-	}
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
 	
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+
 	public Session getSession() {
 		return session;
 	}

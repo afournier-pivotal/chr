@@ -18,6 +18,19 @@ public class Session implements Serializable {
 	@GeneratedValue
 	private Long id;
 	
+	public Session() {}
+	
+	
+	
+	public Session(String name, Date startTime, Date endTime) {
+		super();
+		this.name = name;
+		this.startTime = startTime;
+		this.endTime = endTime;
+	}
+
+
+
 	private String name;
 	
 	@OneToMany
