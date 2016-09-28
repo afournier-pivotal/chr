@@ -3,6 +3,7 @@
  */
 package com.lukeshannon.springconference.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -15,7 +16,9 @@ import javax.persistence.ManyToMany;
  *
  */
 @Entity
-public class Speaker {
+public class Speaker implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue

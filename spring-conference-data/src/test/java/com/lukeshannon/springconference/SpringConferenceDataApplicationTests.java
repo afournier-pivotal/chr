@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.lukeshannon.springconference.model.Attendee;
 import com.lukeshannon.springconference.model.Rating;
@@ -24,20 +23,19 @@ import com.lukeshannon.springconference.repo.SpeakerRepo;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@WebAppConfiguration
 public class SpringConferenceDataApplicationTests {
 	
 	private static final Long ID = Long.valueOf("0");
 	private static final String PETER_INNOTECH_COM = "peter@innotech.com";
 	private static final String INNOTECH = "Innotech";
 
-	@Autowired
-	private AttendeeRepo attendeeRepo;
-	
 	private List<Attendee> attendees = new ArrayList<Attendee>();
 	private List<Speaker> speakers = new ArrayList<Speaker>();
 	private List<Session> sessions = new ArrayList<Session>();
 	private List<Rating> ratings = new ArrayList<Rating>();
+	
+	@Autowired
+	private AttendeeRepo attendeeRepo;
 	
 	@Autowired
 	private RatingRepo ratingRepo;
@@ -55,10 +53,11 @@ public class SpringConferenceDataApplicationTests {
 	@Test
 	public void SpeakerCrudTest() {
 		Speaker speaker = new Speaker();
-		speaker.setId(ID);
 		speaker.setName("The Grand Puba");
 		speaker.setTwitter("thegreatpoba");
 		speaker.setWebsite("http://www.poba.com");
+		speakerRepo.save(speaker);
+		assertNotNull(speakerRepo.findOne(speaker.getId()));
 	}
 	
 	@Test
@@ -71,10 +70,9 @@ public class SpringConferenceDataApplicationTests {
 		Attendee attendee = new Attendee();
 		attendee.setCompany(INNOTECH);
 		attendee.setEmail(PETER_INNOTECH_COM);
-		attendee.setId(ID);
 		attendeeRepo.save(attendee);
-		assertNotNull(attendeeRepo.findOne(ID));
-		assertEquals(attendeeRepo.findOne(ID).getCompany(),INNOTECH);
+		assertNotNull(attendeeRepo.findOne(attendee.getId()));
+		assertEquals(attendeeRepo.findOne(attendee.getId()).getCompany(),INNOTECH);
 	}
 	
 	@Test
