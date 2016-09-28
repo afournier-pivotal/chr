@@ -195,7 +195,7 @@ input[type="text"].textboxsearch,
 	transform: translateX(-100%);
 }
 .page-loading.visible {
-  opacity: 1; visibility:visible; 
+  opacity: 1; visibility:visible;
   -webkit-transition: all 1.5s;
   -moz-transition: all 1.5s;
   -ms-transition: all 1.5s;
@@ -376,6 +376,7 @@ input[type="text"].textboxsearch,
 }
 #navi ul li:hover>a:before,
 #navi ul li.current-menu-item>a:before,
+#navi ul li.active>a:before,
 #navi ul li.current-menu-ancestor>a:before{
   opacity: 1;
   -webkit-transform: scaleX(20);
@@ -1807,9 +1808,11 @@ input[type="text"].textboxsearch,.submit-wrap i,.icons-sidebar-unit,#woocomerce-
 /* Heightlight Item Text Color */
 #navi ul li:hover>a,
 #navi ul li.current-menu-item>a,
+#navi ul li.active>a,
 #navi ul li.current-menu-ancestor>a,
 #mobile-advanced li>a:hover,
 #mobile-advanced li.current-menu-item>a,
+#mobile-advanced li.active>a,
 #mobile-advanced li.current-menu-ancestor>a,
 .icons-sidebar-unit:hover i { 
   color:#eee; 
