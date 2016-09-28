@@ -24,8 +24,11 @@ public class Speaker implements Serializable {
 	@GeneratedValue
 	private Long id;
 	private String name;
+	private String company;
 	private String twitter;
 	private String website;
+	private String tagline;
+	private boolean keynote;
 	
 	@ManyToMany
 	private List<Session> sessions;
@@ -60,7 +63,23 @@ public class Speaker implements Serializable {
 	public void setSessions(List<Session> sessions) {
 		this.sessions = sessions;
 	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String getTagline() {
+		return tagline;
+	}
+	public void setTagline(String tagline) {
+		this.tagline = tagline;
+	}
+	public boolean isKeynote() {
+		return keynote;
+	}
+	public void setKeynote(boolean keynote) {
+		this.keynote = keynote;
+	}
 	
-	
-
 }

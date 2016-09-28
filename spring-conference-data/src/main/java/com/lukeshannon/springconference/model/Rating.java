@@ -30,7 +30,7 @@ public class Rating implements Serializable {
 	
 	private String token;
 	
-	@ManyToOne(optional = false, fetch = FetchType.LAZY)
+	@ManyToOne(optional = false, fetch = FetchType.EAGER)
 	private Session session;
 	
 	
